@@ -1,10 +1,10 @@
 ## 自用
 
 diy-direct:
-https://raw.githubusercontent.com/n1537593644/DIY-rules/refs/heads/main/diy-direct.yaml
+https://raw.githubusercontent.com/haha12358/DIY-rules/refs/heads/main/diy-direct.yaml
 
 diy-proxy:
-https://raw.githubusercontent.com/n1537593644/DIY-rules/refs/heads/main/diy-proxy.yaml
+https://raw.githubusercontent.com/haha12358/DIY-rules/refs/heads/main/diy-proxy.yaml
 
 广告:
 https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.yaml
@@ -30,13 +30,13 @@ rule-providers:
   diy-direct:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/n1537593644/DIY-rules/refs/heads/main/diy-direct.yaml"
+    url: "https://raw.githubusercontent.com/haha12358/DIY-rules/refs/heads/main/diy-direct.yaml"
     path: ./ruleset/diy-direct.yaml
 
   diy-proxy:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/n1537593644/DIY-rules/refs/heads/main/diy-proxy.yaml"
+    url: "https://raw.githubusercontent.com/haha12358/DIY-rules/refs/heads/main/diy-proxy.yaml"
     path: ./ruleset/diy-proxy.yaml
 
   # 可选
