@@ -1,0 +1,7 @@
+payload:
+  - DOMAIN-SUFFIX,jetbrains.com
+  - DOMAIN-KEYWORD,darkreader
+  - DOMAIN-KEYWORD,kaspersky
+  - PROCESS-NAME,kpm.exe
+  - DOMAIN-SUFFIX,lencr.org
+  - DOMAIN-SUFFIX,adtidy.org
