@@ -1,4 +1,4 @@
-##自用##
+**自用**
 diy-direct:
 https://raw.githubusercontent.com/n1537593644/DIY-clash-rules/refs/heads/main/diy-direct.yaml?token=GHSAT0AAAAAADJTW7GLF4RELTVYTYJ4RJLQ2J227EA
 
