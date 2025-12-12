@@ -25,12 +25,14 @@ rule-providers:
     behavior: classical
     url: "https://raw.githubusercontent.com/haha12358/DIY-rules/refs/heads/main/diy-direct.yaml"
     path: ./ruleset/diy-direct.yaml
+    interval: 86400
 
   diy-proxy:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/haha12358/DIY-rules/refs/heads/main/diy-proxy.yaml"
     path: ./ruleset/diy-proxy.yaml
+    interval: 86400
 
   icloud:
     type: http
