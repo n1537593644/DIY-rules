@@ -1,3 +1,4 @@
 payload:
-  - PROCESS-NAME,clash-verge.exe
-  - DOMAIN-SUFFIX,revenuecat.com
+  - 'PROCESS-NAME,clash-verge.exe'
+  - 'DOMAIN-SUFFIX,revenuecat.com'
+  - 'DOMAIN-KEYWORD,darkreader'
