@@ -3,7 +3,7 @@
 mixed-port: 7890 # HTTP(S)和SOCKS代理混合端口
 ipv6: true # 是否允许内核接受IPv6流量
 allow-lan: false # 允许局域网: 允许其他设备经过内核的代理端口访问互联网
-unified-delay: false # 更换延迟计算方式: 去除握手等额外延迟
+unified-delay: true # 更换延迟计算方式: 去除握手等额外延迟
 tcp-concurrent: true # TCP并发
 external-controller: 127.0.0.1:9090 # 外部控制器(HTTP)监听地址: ipv4:端口
 external-ui: ui # 外部用户界面路径(默认:工作目录/ui): 可以将静态网页资源运行在RESTful API(可以为绝对路径,或者内核工作目录的相对路径)
