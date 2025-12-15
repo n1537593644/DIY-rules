@@ -1,7 +1,7 @@
 proxy-providers:
   OuO:
     url: "url" # 订阅
-    type: http
+    输入: http
     interval: 86400
     health-check:
       enable: true
@@ -55,7 +55,6 @@ dns:
   cache-algorithm: arc
   listen: 0.0.0.0:1053
   ipv6: true
-  respect-rules: true
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
   fake-ip-filter-mode: blacklist
@@ -149,5 +148,6 @@ rules:
   - GEOSITE,geolocation-!cn,🌏 !cn兜底
 
   - MATCH,🐟️ 漏网之鱼
+
 
 
