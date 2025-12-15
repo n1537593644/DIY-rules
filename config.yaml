@@ -1,7 +1,7 @@
 proxy-providers:
   OuO:
     url: "url" # 订阅
-    输入: http
+    type: http
     interval: 86400
     health-check:
       enable: true
@@ -148,6 +148,7 @@ rules:
   - GEOSITE,geolocation-!cn,🌏 !cn兜底
 
   - MATCH,🐟️ 漏网之鱼
+
 
 
 
