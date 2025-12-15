@@ -116,5 +116,5 @@ dns:
     - tls://[2402:4e00::]
   # 默认域名解析服务器: 支持UDP,TCP,DoT,DoH,DoQ
   nameserver:
-    - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
