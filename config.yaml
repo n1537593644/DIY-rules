@@ -84,18 +84,18 @@ proxy-groups:
     - { name: '🏠 局域网', type: select, proxies: ['➡️ 全球直连', '🚀 手动切换'] }
     - { name: '🐟️ 漏网之鱼', type: select, proxies: ['🚀 手动切换', '➡️ 全球直连'] }
     - { name: '🚫 广告拦截', type: select, proxies: [REJECT] }
-    - { name: '🇭🇰 香港节点', type: select, filter: "(?!)香港|Hong Kong" }
-    - { name: '🇸🇬 新加坡节点', type: select, filter: "(?!)新加坡|Singapore" }
-    - { name: '🇯🇵 日本节点', type: select, filter: "(?!)日本|Japan" }
-    - { name: '🇨🇳 台湾节点', type: select, filter: "(?!)台湾|Taiwan" }
-    - { name: '🇺🇸 美国节点', type: select, filter: "(?!)美国|United States" }
-    - { name: '♻️ 香港自动', type: url-test, hidden: true, tolerance: 20, interval: 300, filter: "(?!)Hong Kong" }
-    - { name: '♻️ 新加坡自动', type: url-test, hidden: true, tolerance: 20, interval: 300, filter: "(?!)Singapore" }
-    - { name: '♻️ 日本自动', type: url-test, hidden: true, tolerance: 20, interval: 300, filter: "(?!)Japan" }
-    - { name: '♻️ 台湾自动', type: url-test, hidden: true, tolerance: 20, interval: 300, filter: "(?!)Taiwan" }
-    - { name: '♻️ 美国自动', type: url-test, hidden: true, tolerance: 20, interval: 300, filter: "(?!)United States" }
-    - { name: '🇪🇺 欧洲节点', type: select, filter: "(?!)Germany|Britain|Turkey" }
-    - { name: '🇺🇳 其他节点', type: select, filter: "(?!)Argentina|India" }
+    - { name: '🇭🇰 香港节点', type: select, include-all: true, proxies: ['♻️ 香港自动'], filter: "(?!)香港|Hong Kong" }
+    - { name: '🇸🇬 新加坡节点', type: select, include-all: true, proxies: ['♻️ 新加坡自动'], filter: "(?!)新加坡|Singapore" }
+    - { name: '🇯🇵 日本节点', type: select, include-all: true, proxies: ['♻️ 日本自动'], filter: "(?!)日本|Japan" }
+    - { name: '🇨🇳 台湾节点', type: select, include-all: true, proxies: ['♻️ 台湾自动'], filter: "(?!)台湾|Taiwan" }
+    - { name: '🇺🇸 美国节点', type: select, include-all: true, proxies: ['♻️ 美国自动'], filter: "(?!)美国|United States" }
+    - { name: '🇪🇺 欧洲节点', type: select, include-all: true, filter: "(?!)德国|Germany|英国|Britain|土耳其|Turkey" }
+    - { name: '🇺🇳 其他节点', type: select, include-all: true, filter: "(?!)阿根廷|Argentina|印度|India|越南|Vietnam|泰国|Thailand" }
+    - { name: '♻️ 香港自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?!)香港|Hong Kong" }
+    - { name: '♻️ 新加坡自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?!)新加坡|Singapore" }
+    - { name: '♻️ 日本自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?!)日本|Japan" }
+    - { name: '♻️ 台湾自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?!)台湾|Taiwan" }
+    - { name: '♻️ 美国自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?!)美国|United States" }
 
 rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: yaml}
@@ -149,3 +149,4 @@ rules:
   - GEOSITE,geolocation-!cn,🌏 !cn兜底
 
   - MATCH,🐟️ 漏网之鱼
+
