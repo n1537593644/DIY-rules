@@ -11,7 +11,8 @@ proxy-providers:
       interval: 300
     proxy: DIRECT
     header:
-      User-Agent: "mihomo"
+      User-Agent:
+        - "mihomo"
     override:
       udp: true
 
@@ -142,5 +143,6 @@ rules:
   - GEOSITE,CN,🇨🇳 CN兜底
   - GEOSITE,geolocation-!cn,🌏 !cn兜底
   - GEOIP,CN,🇨🇳 CN兜底
+
 
   - MATCH,🐟️ 漏网之鱼
