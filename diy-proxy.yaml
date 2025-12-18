@@ -1,5 +1,4 @@
 payload:
-  - 'IP-CIDR,8.8.8.8/32,no-resolve'
   - 'PROCESS-NAME,clash-verge.exe'
   - 'DOMAIN-SUFFIX,revenuecat.com'
   - 'DOMAIN-KEYWORD,darkreader'
