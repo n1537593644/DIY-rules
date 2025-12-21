@@ -3,4 +3,4 @@ payload:
   - 'DOMAIN-SUFFIX,scriptcat.org'
   - 'DOMAIN-SUFFIX,muketool.com'
   - 'DOMAIN-SUFFIX,wemod.com'
-  - 'PROCESS-NAME,RuntimeBroker.exe'
+  - 'PROCESS-NAME,Todo.exe'
