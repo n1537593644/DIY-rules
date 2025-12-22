@@ -4,7 +4,7 @@ proxy-providers:
   p1:
     <<: *p
     # 订阅地址
-    url: "https://oss5.cauenvao.click/api/v1/client/subscribe?token=4efff1e7eda83946ffebee61a4259bf6"
+    url: ""
     header:
       User-Agent:
         - "mihomo"
@@ -156,3 +156,4 @@ rules:
   - GEOIP,CN,🇨🇳 CN兜底
 
   - MATCH,🐟️ 漏网之鱼
+
