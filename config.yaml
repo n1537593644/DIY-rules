@@ -38,17 +38,8 @@ profile:
   store-selected: true
   store-fake-ip: true
 
-geodata-mode: true
-geo-auto-update: true
-geo-update-interval: 24
-geox-url:
-  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
-  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
-  asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
-
 tun:
-  enable: false
+  enable: true
   stack: mixed
   dns-hijack:
     - "any:53"
@@ -77,12 +68,7 @@ dns:
   nameserver:
     - https://8.8.8.8/dns-query#RULES&ecs=223.5.5.0/24
   fake-ip-filter:
-    - "*"
-    - "+.lan"
-    - "+.local"
-    - "time.*.com"
-    - "+.ntp.org"
-    - "+.ntp.aliyun.com"
+    - "rule-set:fakeipfilter"
 
 proxy-groups:
   - { name: '🚀 手动切换', type: select, proxies: ['🇭🇰 香港节点', '🇸🇬 新加坡节点', '🇯🇵 日本节点', '🇨🇳 台湾节点', '🇺🇸 美国节点', '🇪🇺 欧洲节点', '🇺🇳 其他节点'] }
@@ -104,14 +90,16 @@ proxy-groups:
   - { name: '♻️ 日本自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)日本|Japan" }
   - { name: '♻️ 台湾自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)台湾|Taiwan" }
   - { name: '♻️ 美国自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)美国|United States" }
+
 rule-anchor:
-  ad: &ad {type: http, interval: 86400, behavior: domain, format: mrs}
+  mrs: &mrs {type: http, interval: 86400, behavior: domain, format: mrs}
   domain: &domain {type: http, interval: 86400, behavior: domain, format: yaml}
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: yaml}
   class: &class {type: http, interval: 86400, behavior: classical, format: yaml}
 
 rule-providers:
-  reject: {<<: *ad, url: "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.mrs"}
+  reject: {<<: *mrs, url: "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.mrs"}
+  fakeipfilter: {<<: *mrs, url: "https://raw.githubusercontent.com/wwqgtxx/clash-rules/release/fakeip-filter.mrs"}
   
   icloud: {<<: *domain, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt"}
   apple: {<<: *domain, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt"}
@@ -145,15 +133,12 @@ rules:
 
   - RULE-SET,proxy,🚀 手动切换
   - RULE-SET,direct,➡️ 全球直连
-
+  
   - RULE-SET,lancidr,🏠 局域网,no-resolve
   - RULE-SET,telegramcidr,🚀 手动切换,no-resolve
   - RULE-SET,cncidr,➡️ 全球直连
 
-  - GEOIP,LAN,➡️ 全球直连,no-resolve
   - GEOSITE,CN,🇨🇳 CN兜底
-  - GEOSITE,geolocation-!cn,🌏 !cn兜底
   - GEOIP,CN,🇨🇳 CN兜底
 
   - MATCH,🐟️ 漏网之鱼
-
