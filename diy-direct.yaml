@@ -1,6 +1,6 @@
 payload:
-  - 'DOMAIN,whoiscx.com'
-  - 'DOMAIN-SUFFIX,scriptcat.org'
-  - 'DOMAIN-SUFFIX,muketool.com'
-  - 'DOMAIN-SUFFIX,wemod.com'
-  - 'DOMAIN,download-cdn.jetbrains.com'
+  - DOMAIN-SUFFIX,scriptcat.org
+  - DOMAIN-SUFFIX,muketool.com
+  - DOMAIN-SUFFIX,wemod.com
+  - DOMAIN,download-cdn.jetbrains.com
+  - DOMAIN-SUFFIX,download.nvidia.com
