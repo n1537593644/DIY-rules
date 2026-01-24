@@ -83,8 +83,8 @@ proxy-groups:
   - { name: '🏠 局域网', type: select, proxies: ['➡️ 直连', '🚀 默认'] }
   - { name: '🐟️ 漏网之鱼', type: select, proxies: ['🚀 默认', '➡️ 直连'] }
   - { name: '🚫 广告', type: select, proxies: [REJECT] }
-  - { name: '♻️ 香港自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)香港|Hong Kong" }
-  - { name: '♻️ 新加坡自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)新加坡|Singapore" }
-  - { name: '♻️ 日本自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)日本|Japan" }
-  - { name: '♻️ 台湾自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)台湾|Taiwan" }
-  - { name: '♻️ 美国自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)美国|United States" }
+  - { name: '♻️ 香港自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)港|hk|hongkong|hong kong" }
+  - { name: '♻️ 新加坡自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)新加坡|sg|singapore" }
+  - { name: '♻️ 日本自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)日|jp|japan" }
+  - { name: '♻️ 台湾自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)台|taiwan" }
+  - { name: '♻️ 美国自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)美|us|unitedstates|united states" }
