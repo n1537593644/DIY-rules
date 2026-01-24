@@ -66,7 +66,7 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver:
-    - https://8.8.8.8/dns-query#RULES&ecs=223.5.5.0/24
+    - https://8.8.8.8/dns-query#RULES&ecs=183.228.0.0/16
   fake-ip-filter:
     - "rule-set:fakeipfilter"
 
@@ -142,3 +142,4 @@ rules:
   - GEOIP,CN,🇨🇳 CN兜底
 
   - MATCH,🐟️ 漏网之鱼
+
