@@ -69,3 +69,22 @@ dns:
     - https://8.8.8.8/dns-query#RULES&ecs=183.228.0.0/16
   fake-ip-filter:
     - "rule-set:fakeipfilter"
+
+proxy-groups:
+  - { name: '🚀 默认', type: select, proxies: ['🇭🇰 香港', '🇸🇬 新加坡', '🇯🇵 日本', '🇨🇳 台湾', '🇺🇸 美国', '🇪🇺 欧洲', '🇺🇳 其他'] }
+  - { name: '🇭🇰 香港', type: select, include-all: true, proxies: ['♻️ 香港自动'], filter: "(?i)港|hk|hongkong|hong kong" }
+  - { name: '🇸🇬 新加坡', type: select, include-all: true, proxies: ['♻️ 新加坡自动'], filter: "(?i)新加坡|sg|singapore" }
+  - { name: '🇯🇵 日本', type: select, include-all: true, proxies: ['♻️ 日本自动'], filter: "(?i)日|jp|japan" }
+  - { name: '🇨🇳 台湾', type: select, include-all: true, proxies: ['♻️ 台湾自动'], filter: "(?i)台|taiwan" }
+  - { name: '🇺🇸 美国', type: select, include-all: true, proxies: ['♻️ 美国自动'], filter: "(?i)美|us|unitedstates|united states" }
+  - { name: '🇪🇺 欧洲', type: select, include-all: true, filter: "(?i)德|Germany|英|Britain|土耳其|Turkey" }
+  - { name: '🇺🇳 其他', type: select, include-all: true, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|taiwan|日|jp|japan|新加坡|sg|singapore|美|us|unitedstates|德国|Germany|英国|Britain|土耳其|Turkey)).*" }
+  - { name: '➡️ 直连', type: select, proxies: [DIRECT, '🚀 默认'] }
+  - { name: '🏠 局域网', type: select, proxies: ['➡️ 直连', '🚀 默认'] }
+  - { name: '🐟️ 漏网之鱼', type: select, proxies: ['🚀 默认', '➡️ 直连'] }
+  - { name: '🚫 广告', type: select, proxies: [REJECT] }
+  - { name: '♻️ 香港自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)香港|Hong Kong" }
+  - { name: '♻️ 新加坡自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)新加坡|Singapore" }
+  - { name: '♻️ 日本自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)日本|Japan" }
+  - { name: '♻️ 台湾自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)台湾|Taiwan" }
+  - { name: '♻️ 美国自动', type: url-test, include-all: true, hidden: true, tolerance: 20, interval: 300, filter: "(?i)美国|United States" }
