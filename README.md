@@ -3,6 +3,7 @@
 ---
 
 ## 使用方式
+[config](https://github.com/haha12358/DIY-rules/blob/main/config.yaml)
 ```yaml
 rule-anchor:
   mrs: &mrs {type: http, interval: 86400, behavior: domain, format: mrs}
