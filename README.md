@@ -58,9 +58,3 @@ rules:
 
   - MATCH,🐟️ 漏网之鱼
 ```
-
----
-
-## 参考
-1. [qichiyuhub/rule](https://github.com/qichiyuhub/rule/blob/main/config/mihomo/configdns.yaml)
-2. [虚空终端](https://wiki.metacubex.one/)
